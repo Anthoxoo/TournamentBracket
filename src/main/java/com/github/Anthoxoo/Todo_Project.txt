@@ -1,0 +1,26 @@
+folder tree :
+src/main/java/com.github/Anthoxoo
+    Services
+        DatabaseService.java --> Using sqlite
+        TournamentService.java --> Creates and manages the tree
+
+    Classes
+        Player.java
+        Team.java
+        Match.java
+
+    Main.java
+
+Database.db
+    Player table
+        Id_Player ( primary )
+        Id_Team ( foreign )
+        Name_Player
+        Genre_Player
+    Team table
+        Id_Team ( Primary )
+        Id_Player1 ( Foreign )
+        Id_Player2 ( Foreign )
+        Team_Name
+        Anthem_Team
+JavaFX ( later )

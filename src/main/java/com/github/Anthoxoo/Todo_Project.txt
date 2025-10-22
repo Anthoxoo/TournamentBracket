@@ -6,8 +6,28 @@ src/main/java/com.github/Anthoxoo
 
     Classes
         Player.java
+            Constructor --> playerId, name, gender,teamId
+            getPlayerId
+            getName
+            getGender
+            teamId
+            setTeamId
+            setPlayerId
         Team.java
+            Constructor --> idTeam, teamName, idPlayer1, idPlayer2, anthem
+            getIdTeam
+            get_team_name
+            get_id_player
+            get_anthem
+            set_id_id_player1
+            set_id_player2
         Match.java
+            Constructor --> match_id, team_id1, team_id2,winner=Null
+            get match_id
+            get team_id1
+            get team_id2
+            get_winner
+            set_winner
 
     Main.java
 

@@ -1,5 +1,5 @@
 folder tree :
-src/main/java/com.github/Anthoxoo
+src/main/java/com/github/anthoxoo
     Services
         DatabaseService.java --> Using sqlite
         TournamentService.java --> Creates and manages the tree
@@ -22,12 +22,10 @@ src/main/java/com.github/Anthoxoo
             setIdPlayer1
             setIdPlayer2
         Match.java
-            Constructor --> match_id, team_id1, team_id2,winner=Null
+            Constructor --> match_id, team_id1, team_id2
             get matchId
             get teamId1
             get teamId2
-            getWinner
-            setWinner
 
     Main.java
 

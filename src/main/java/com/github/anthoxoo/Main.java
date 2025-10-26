@@ -1,25 +1,34 @@
 package com.github.anthoxoo;
+import com.github.anthoxoo.Classes.*;
+import com.github.anthoxoo.Services.*;
 
-import com.github.anthoxoo.Classes.Match;
-import com.github.anthoxoo.Classes.Player;
-import com.github.anthoxoo.Classes.Team;
+import java.util.List;
+
 
 public class Main {
     static void main() {
-        //Playground to see if it works
-        Player player1 = new Player(1,"Antoine", 'M');
-        Player player2 = new Player(2,"Antoinette", 'F');
-        Player player3 = new Player(3,"Julien", 'M');
-        Player player4 = new Player(4,"Juliette", 'F');
+        Player p1 = new Player("Alice", 'F');
+        Player p2 = new Player("Bob", 'M');
+        Player p3 = new Player("Charlie", 'M');
+        Player p4 = new Player("Diana", 'F');
+        Player p5 = new Player("Ethan", 'M');
+        Player p6 = new Player("Fiona", 'F');
+        Player p7 = new Player("George", 'M');
+        Player p8 = new Player("Hannah", 'F');
 
-        Team team1 = new Team(1, "An", player1, player2, "Lets go !");
-        Team team2 = new Team(2, "Ju", player3, player4, "Here we go !");
+        Team t1 = new Team("Team A", p1, p2, "Go A!");
+        Team t2 = new Team("Team B", p3, p4, "Go B!");
+        Team t3 = new Team("Team C", p5, p6, "Go C!");
+        Team t4 = new Team("Team D", p7, p8, "Go D!");
+        // TODO creates the match based on the number of teams, browse the tree to find the current match and ask for the winner,
+        // TODO be able to do the opposite match so match 1 from left then match 1 from right...
+        Match match1 = new Match(t1, t2);
+        Match match2 = new Match(t3, t4);
 
-        player1.setTeam(team1); player2.setTeam(team1);
-        player3.setTeam(team2); player4.setTeam(team2);
+        List<Team> teams = List.of(t1, t2, t3, t4);
+        TreeService builder = new TreeService();
+        MatchNode root = builder.buildTree(teams);
 
-        Match match1 = new Match(1,team1,team2);
-        System.out.println(match1.getTeam1().getPlayer1().getName());
 
     }
 }

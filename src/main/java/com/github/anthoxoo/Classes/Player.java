@@ -1,16 +1,20 @@
 package com.github.anthoxoo.Classes;
 
 public class Player {
+    // shared with every Players thanks to the static keyword
+    private static int numPlayers = 0;
+
     private final int playerId;
     private final String name;
     private final char gender;
     private Team team;
 
     // Constructor
-    public Player(int playerId, String name, char gender) {
-        this.playerId = playerId;
+    public Player(String name, char gender) {
+        this.playerId = numPlayers++;
         this.name = name;
         this.gender = gender;
+        this.team = null;
     }
 
     //getters
@@ -23,15 +27,7 @@ public class Player {
     public char getGender(){
         return this.gender;
     }
-    public Team getTeam(){
-        if (this.team != null){
-            return this.team;
-        }
-        else{
-            System.out.println("This player does not have a team yet !");
-            return null;
-        }
-    }
+    public Team getTeam(){ return this.team; }
 
     //setters
     public void setTeam(Team team){

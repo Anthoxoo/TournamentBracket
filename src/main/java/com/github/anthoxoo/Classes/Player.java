@@ -6,15 +6,13 @@ public class Player {
 
     private final int playerId;
     private final String name;
-    private final char gender;
     private Team team;
 
     // Constructor
-    public Player(String name, char gender) {
+    public Player(String name) {
         this.playerId = numPlayers++;
         this.name = name;
-        this.gender = gender;
-        this.team = null;
+        this.team = null; //may be useful later with javaFX cause more infos
     }
 
     //getters
@@ -24,13 +22,7 @@ public class Player {
     public String getName(){
         return this.name;
     }
-    public char getGender(){
-        return this.gender;
-    }
     public Team getTeam(){ return this.team; }
 
-    //setters
-    public void setTeam(Team team){
-        this.team = team;
-    }
+    public void setTeam(Team team){ this.team = team; }
 }

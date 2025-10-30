@@ -8,15 +8,13 @@ public class Team {
     private final String teamName;
     private final Player player1;
     private final Player player2;
-    private final String anthem;
 
     // Constructor
-    public Team(String teamName, Player player1, Player player2, String anthem) {
+    public Team(String teamName, Player player1, Player player2) {
         this.teamId = numTeams++;
         this.teamName = teamName;
         this.player1 = player1;
         this.player2 = player2;
-        this.anthem = anthem;
     }
 
     // getters
@@ -24,5 +22,4 @@ public class Team {
     public Player getPlayer2() { return player2; }
     public String getTeamName() { return teamName; }
     public int getTeamId() { return teamId; }
-    public String getAnthem() { return anthem; }
 }
